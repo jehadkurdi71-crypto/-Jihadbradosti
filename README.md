@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jihad IT - Premium Links</title>
+    
+    <!-- هێنانی لۆگۆکان -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- هێنانی فۆنتەکان: Cinzel بۆ ئینگلیزی و Noto Sans Arabic بۆ کوردی -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Noto+Sans+Arabic:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ڕێکخستنی ڕەنگە ئاڵتونییە شاهانەییەکان */
+        :root {
+            --gold-light: #F9F1CC;
+            --gold-mid: #D4AF37;   /* ڕەنگی ئاڵتونیی ڕاستەقینە */
+            --gold-dark: #AA8222;
+            --black-bg: #030303;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Noto Sans Arabic', sans-serif;
+            background-color: var(--black-bg);
+            background-image: radial-gradient(circle at center, #141100 0%, #030303 75%);
+            overflow: hidden;
+        }
+
+        /* ئیفێکتی ئاڵتونی بۆ تێکستەکان */
+        .gold-text {
+            background: linear-gradient(to right, var(--gold-mid), var(--gold-light), var(--gold-dark), var(--gold-light), var(--gold-mid));
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: shine 4s linear infinite;
+        }
+
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+
+        /* ----- شاشەی پێشوازی ----- */
+        .splash-screen {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            animation: fadeOutSplash 3.5s forwards;
+        }
+
+        /* تێبینی: لێرەدا letter-spacing لابراوە بۆ ئەوەی پیتە کوردییەکان تێکنەچن */
+        .splash-screen h1 {
+            font-family: 'Noto Sans Arabic', sans-serif;
+            font-size: 4rem;
+            font-weight: 800;
+            text-shadow: 0 0 40px rgba(212, 175, 55, 0.4);
+        }
+
+        @keyframes fadeOutSplash {
+            0% { opacity: 1; visibility: visible; }
+            80% { opacity: 1; visibility: visible; }
+            100% { opacity: 0; visibility: hidden; display: none; }
+        }
+
+        /* ----- باکگراوندی JIHAD IT لە پشتەوە ----- */
+        .background-text {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Cinzel', serif;
+            font-size: 15vw;
+            font-weight: 900;
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(212, 175, 55, 0.15);
+            text-transform: uppercase;
+            white-space: nowrap;
+            z-index: 0;
+            pointer-events: none;
+            letter-spacing: 15px; /* ئەمە تەنها بۆ ئینگلیزییەکە کێشەی نییە */
+            animation: pulseBg 5s infinite alternate;
+        }
+
+        @keyframes pulseBg {
+            0% { text-shadow: 0 0 10px rgba(212, 175, 55, 0.0); }
+            100% { text-shadow: 0 0 60px rgba(212, 175, 55, 0.25); }
+        }
+
+        /* درەوشانەوەی ئەستێرەیی باکگراوند */
+        .sparkles {
+            position: absolute;
+            width: 100%; height: 100%;
+            background-image: 
+                radial-gradient(1px 1px at 10% 20%, var(--gold-light), rgba(0,0,0,0)),
+                radial-gradient(1.5px 1.5px at 30% 60%, var(--gold-light), rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 80% 40%, var(--gold-light), rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 60% 80%, var(--gold-light), rgba(0,0,0,0));
+            animation: twinkle 4s infinite alternate;
+            opacity: 0.4;
+            z-index: 1;
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.2; transform: scale(0.9); }
+            100% { opacity: 0.7; transform: scale(1.1); }
+        }
+
+        /* ----- کۆنتەینەری سەرەکی ----- */
+        .main-content {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .card {
+            background: rgba(15, 15, 15, 0.4);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 20px;
+            padding: 45px 40px;
+            width: 85%;
+            max-width: 420px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.9), inset 0 0 25px rgba(212, 175, 55, 0.08);
+            text-align: center;
+            animation: slideUp 1.5s ease-out 2.8s both;
+        }
+
+        @keyframes slideUp {
+            0% { opacity: 0; transform: translateY(40px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .profile-title {
+            font-family: 'Cinzel', serif;
+            margin-bottom: 35px;
+            font-weight: 900;
+            font-size: 2.8rem;
+            letter-spacing: 4px;
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+
+        /* ----- لینکەکان ----- */
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 30px;
+            background: rgba(30, 30, 30, 0.6);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            border-radius: 12px;
+            color: #E0E0E0;
+            text-decoration: none;
+            font-size: 1.25rem;
+            font-weight: 700;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+
+        .social-btn span {
+            font-family: 'Noto Sans Arabic', sans-serif;
+        }
+
+        /* بریقەی ناو دوگمەکان */
+        .social-btn::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 50%; height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transform: skewX(-25deg);
+            transition: 0.5s;
+        }
+
+        .social-btn:hover::before {
+            left: 200%;
+            transition: 0.7s ease-in-out;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-5px) scale(1.02);
+            background: rgba(40, 40, 40, 0.9);
+            border-color: var(--gold-mid);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.6), 0 0 20px rgba(212, 175, 55, 0.3);
+            color: var(--gold-light);
+        }
+
+        .social-btn i {
+            font-size: 1.8rem;
+            background: linear-gradient(to bottom, var(--gold-light), var(--gold-mid));
+            -webkit-background-clip: text;
+            color: transparent;
+            transition: all 0.4s ease;
+        }
+
+        .social-btn:hover i {
+            transform: scale(1.15) rotate(5deg);
+            filter: drop-shadow(0 0 10px var(--gold-mid));
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ئیفێکتی درەوشانەوەی پشتەوە -->
+    <div class="sparkles"></div>
+
+    <!-- شاشەی سەرەتا -->
+    <div class="splash-screen">
+        <h1 class="gold-text">بەخێر بێن</h1>
+    </div>
+
+    <!-- باکگراوندی بریقەدار -->
+    <div class="background-text">
+        JIHAD IT
+    </div>
+
+    <!-- بەشی سەرەکی -->
+    <div class="main-content">
+        <div class="card">
+            
+            <h2 class="profile-title gold-text">JIHAD IT</h2>
+            
+            <div class="social-links">
+                <a href="https://www.snapchat.com/add/just_jih4d?share_id=2DvetVRtQXeJ1eGdRYMUqg&locale=en_IQ" target="_blank" class="social-btn">
+                    <span>سناپچات</span>
+                    <i class="fa-brands fa-snapchat"></i>
+                </a>
+                
+                <a href="https://www.tiktok.com/@hope_jih4d?_r=1&_t=ZS-96c5K4viYDt" target="_blank" class="social-btn">
+                    <span>تیکتۆک</span>
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+                
+                <a href="https://www.facebook.com/share/1Cs6RbizPN/?mibextid=wwXIfr" target="_blank" class="social-btn">
+                    <span>فەیسبووک</span>
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                
+                <a href="https://t.me/Jih4d_7" target="_blank" class="social-btn">
+                    <span>تیلیگرام</span>
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+                
+                <!-- ژمارەی وەتسئەپەکەت لێرە دابنێ لە جێگەی سفرەکان -->
+                <a href="https://wa.me/9647500000000" target="_blank" class="social-btn">
+                    <span>وەتسئەپ</span>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
